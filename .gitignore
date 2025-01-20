@@ -1,0 +1,55 @@
+# General rules for the entire repository
+
+# Node.js modules (common across services)
+node_modules/
+
+# Logs and temp files
+logs/
+*.log
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Environment variables
+.env
+.env.*  # To cover environment-specific files (e.g., .env.production)
+
+# Compiled Typescript files
+dist/
+build/
+
+# OS and IDE-specific files
+.DS_STORE
+Thumbs.db
+.idea/
+.vscode/
+
+# Coverage reports (if using code coverage tools)
+docker-compose.override.yml
+.dockerignore
+
+# Package lock files (optional; if you want to use yarn or npm consistently)
+# package-lock.json
+# yarn.lock
+
+# Miscellaneous
+*.swp
+*.swo
+
+# Service-specific .gitignore rules
+
+# Frontend (React + Typescript)
+frontend/node_modules/
+frontend/dist/  # Compiled frontend code
+frontend/.env
+frontend/.next/ # If using Next.js
+
+# Backend (Node.js + Typescript)
+backend/node_modules/
+backend/dist/   # Compiled backend code
+backend/.env
+backend/logs    # Log files for backend
+
+# Database (PostgresSQL, etc.)
+database/data/   # Data storage (if using local storage for DB)
+database/logs/   # Logs for database
