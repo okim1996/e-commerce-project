@@ -6,12 +6,12 @@ export default function SimpleFetch() {
   useEffect(() => {
     async function fetchBackend() {
       try {
-        const response = await fetch("http://localhost:4000");
+        const response = await fetch("http://localhost:4000/api/products");
         if (!response.ok) {
           throw new Error(`Error : ${response.statusText}`);
         }
         const data = await response.json();
-        console.log(data.message);
+        console.log(data);
       } catch (error) {
         console.log(`Error fetching data: ${error}`);
         return null;
